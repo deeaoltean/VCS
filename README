@@ -1,0 +1,48 @@
+Oltean Andreea-Diana 324CD
+Homework 2 - Version Control System
+
+General idea      ------> I created the VCS system which contains all the
+                          branches I create. The main idea is that my 
+                          operations use only the branch I am working on,
+                          not the whole system. I choosed to work with
+                          ArrayLists, because I consider it was much easier.
+                          
+Classes for type definitions
+
+Commit            ------> Class created for keeping the id, the message, the 
+                          snapshot of a commit.
+                    
+Branch            ------> Class created for memorizing the name and the lits of
+                          commits.
+                    
+Vcs               ------> Class created for memorizing the active snapshot, the
+                          staging, the current branch I am working on, the 
+                          whole branch system, the first commit, the output 
+                          writer and a filed 'saved' which tells me if the 
+                          staging is empty,if I did a commit.
+                    
+All               ------> In each class there are getters and setters to access
+                          the fields.
+                    
+
+Classes for the operations
+
+StatusOperaion    ------> Prints the current branch and the components of the 
+                          staging list.                                       
+
+BranchOperation   ------> Creates a new branch list in the VCS system.
+
+CommitOpeation    ------> Creates the a new commit on the current branch whitch
+                          contains a snapshot with all the operations done in 
+                          staging.
+
+CheckoutOperation ------> Deletes the commits until we reach the desired one or
+                          moves on another branch, if the staging is empty.
+
+LogOperation      ------> Lists the commits on the current branch and their
+                          message.
+
+RollbackOperation ------> Cleans the staging and sets the previous snapshot as
+                          the active one.
+
+InvalidVcsOperation ----> Prints an error message, if the operation is invalid.
